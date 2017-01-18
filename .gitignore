@@ -52,3 +52,7 @@ project/boot
 
 # Pax Runner (for easy OSGi launching)
 runner
+
+node_modules/
+build/
+npm-debug.log
