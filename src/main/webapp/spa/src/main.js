@@ -1,16 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource'
+
 import Navigation from './components/Navigation/navigation.vue';
-// import Loader from 'components/Loader/Loader';
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 
-// import 'src/config/http';
 import routes from './routes';
-// import 'src/style.scss';
-
-// export const LoadingState = new Vue();
 
 export const router = new VueRouter({
   base: "/spa/",
@@ -23,18 +21,6 @@ const app = new Vue({
   router,
   components: {
     Navigation
-    //Loader
   }
 
-/*  data(){
-    return {
-      isLoading: false
-    };
-  },*/
-
-  /*created(){
-    LoadingState.$on('toggle', (isLoading) => {
-      this.isLoading = isLoading;
-    });
-  }*/
 }).$mount('#app');

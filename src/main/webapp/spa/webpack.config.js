@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './build'),
-    publicPath: '/spa/build/',
+    publicPath: '/build/',//'/spa/build/',
     filename: 'bundle.js'
   },
 
@@ -51,7 +51,7 @@ module.exports = {
      // 'src': path.resolve(__dirname, './src'),
       //'assets': path.resolve(__dirname, './src/assets/'),
       //'components': path.resolve(__dirname, './src/vue-components'),
-      'vue$': 'vue/dist/vue.common.js',
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
 
@@ -88,4 +88,3 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
-

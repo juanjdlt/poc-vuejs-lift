@@ -5,17 +5,17 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{pageTitle}}</title>
+  <title>Single Page App Webpack + Vue + Lift</title>
 </head>
 <body>
 <div id="app" data-lift="appSnippet">
   <navigation></navigation>
-<!--   <loader v-show="isLoading"></loader>
- -->
     <p class="fromLift"></p>
+
     <div class="container">
         <router-view></router-view>
     </div>
+
 </div>
 
 <script src="./build/bundle.js"></script>
