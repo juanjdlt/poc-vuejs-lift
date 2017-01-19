@@ -28,21 +28,24 @@
     methods: {
       sendText: function () {
         var value = this.message.trim()
-        this.isProcessing = true
-        this.buttonName = 'enviando...'
         if (!value) {
           return
         }
 
-        /*this.$http.post('/message', {msg: value}).then((response) => {
-          // success callback
-        }, (response) => {
-          // error callback
-        });*/
+        this.isProcessing = true
+        this.buttonName = 'enviando...'
 
-        this.message = ''
-        this.result = value + "1212"
-        this.isProcessing = false
+        this.$http.post('message', {msg: value}).then((response) => {
+          this.message = ''
+          this.result = response.body.data
+          this.isProcessing = false
+        }, (response) => {
+          this.message = ''
+          this.result = response.statusText
+          this.isProcessing = false
+          this.buttonName = 'enviar'
+        });
+       
       }
     }
   }

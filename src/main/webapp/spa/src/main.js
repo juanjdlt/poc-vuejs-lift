@@ -14,7 +14,7 @@ Vue.component('navigation', Navigation); //globally registering a component
 //The vue-resource staff (wrappers, handlers) should be under src/config folder
 Vue.use(VueResource);
 Vue.http.options = {
-  root: 'https://locahost:8080/api'
+  root: 'http://localhost:8081/api'  //JUST FOR DEV, couse is proxied, change the URL depending on env
 };
 
 Vue.http.interceptors.push((request, next) => {

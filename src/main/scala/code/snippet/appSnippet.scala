@@ -1,5 +1,4 @@
-package code
-package snippet
+package code.snippet
 
 import net.liftweb.util.Helpers._
 import java.util.Date
