@@ -14,8 +14,9 @@
 </template>
 
 <script>
-  module.export
+  
   export default {
+    pageTitle: 'SPA | Home Page',
     data () {
       return {
         name: 'Listeros',
@@ -33,7 +34,12 @@
           return
         }
 
-        console.log(value)            
+        /*this.$http.post('/message', {msg: value}).then((response) => {
+          // success callback
+        }, (response) => {
+          // error callback
+        });*/
+
         this.message = ''
         this.result = value + "1212"
         this.isProcessing = false
