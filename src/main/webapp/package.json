@@ -1,7 +1,7 @@
 {
   "name": "poc-vuejs-lift",
   "version": "1.0.0",
-  "description": "Single Page App using scala lift as backend (REST API)",
+  "description": "Single Page App using scala lift as a backend (REST API)",
   "keywords": [
     "vue.js",
     "vue.js router",
@@ -11,12 +11,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --config webpack.base.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.base.conf.js"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
-    "font-awesome": "^4.7.0",
     "vue": "^2.1.8",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1"

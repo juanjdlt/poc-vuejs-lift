@@ -7,13 +7,12 @@
   </div>
 </template>
 
-<script>
+  <script>  
   export default {
-/*  pageTitle: 'SPA | Home Page',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    data () {
+      return {
+        name: 'Listeros'
+      }
     }
-  }*/
-  };
+  }
 </script>

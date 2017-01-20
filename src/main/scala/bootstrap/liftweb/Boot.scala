@@ -22,10 +22,7 @@ class Boot {
 
     // Build SiteMap
     def sitemap = SiteMap(
-      Menu.i("Home") / "index",
-      Menu.i("SPA") / "spa" / "index",
-      Menu.i("vue-lift") / "vue-lift" / "index"
-
+      Menu.i("Home") / "index"
     )
 
     // set the sitemap.  Note if you don't want access control for

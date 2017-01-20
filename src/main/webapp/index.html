@@ -1,32 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+    <meta charset="utf-8">
+    <title>PoC SPA WebPack + VueJS + Lift</title>
   </head>
-  <body>
-    <p><a href="https://auth0.com/blog/build-an-app-with-vuejs/">https://auth0.com/blog/build-an-app-with-vuejs/</a></p>
-    <p>Key Points to see at PoC, analice, and todos</p>
-    <ul>
-      <li>Check JSON security sessionID serverID</li>
-      <li> Server Load balancing </li>
-      <li>Security</li>
-      <li>See if we use Vue for all the frontend stuff SPA (routes, auth, etc) or handle pages intearctiosn without vue-routes (each section, html page would have its on app.js (vue handler)</li>
-      <li>We would only use Lift for login/signup and to render the first time, mainly we will use as a REST service</li>
-    </ul>
+  <body data-lift="appSnippet">
+    <p class="fromLift"></p>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
 
-    <ul>
-      <li><a href="/spa/">SPA (vuejs handling routes, component based)</a></li>
-      <li> <a href="/vue-lift/index">Multi page app (vuejs + webpack to handle interaction per page basis)</a></li>
-    </ul>
-
-    <p>References</p>
-    <ul>
-      <li><a href="https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-introduction">SPA with Vue Webpack vue-router vue-resource by Evan You</a></li>
-      <li>Webpack: <a href="https://www.youtube.com/watch?v=WQue1AN93YU">Front End Center — Webpack from First Principles
-</a></li>
-      <li><a href="http://yang-wei.github.io/blog/2016/01/13/vue-dot-js-server-side-rendered-data/"></a>Vuejs + Server Side Rendered data </li>
-    </ul>
+    <script src="./build/bundle.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   </body>
 </html>
-

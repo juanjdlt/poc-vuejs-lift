@@ -1,8 +1,17 @@
-//REF: https://webpack.github.io/docs/configuration.html
-// https://vuejs-templates.github.io/webpack/structure.html
+/*
+Config Options: https://webpack.github.io/docs/configuration.html
+File and folders organization for dev and production env, 
+  example: https://github.com/villeristi/vue.js-starter-template/tree/master/webpack
+  
+Configurations for Production environment:
+  http://vue-loader.vuejs.org/en/workflow/production.html
+  https://github.com/vuejs-templates/webpack/blob/master/template/build/webpack.prod.conf.js
+  https://github.com/villeristi/vue.js-starter-template/blob/master/webpack/production.js
+
+*/
+
 var path = require('path');
 var webpack = require('webpack');
-//DEV TOOLS
 
 const validator = require('webpack-validator'); //Validator dont know "rules" option, disabling for now
 
@@ -11,12 +20,11 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './build'),
-    publicPath: '/build/',//'/spa/build/',
+    publicPath: '/build/',
     filename: 'bundle.js'
   },
 
-  //Check
-    //https://vue-loader.vuejs.org/en/configurations/asset-url.html
+  //rules == loaders (in older versions of webpack)
   module: {
     rules: [
       {
@@ -46,15 +54,6 @@ module.exports = {
     ]
   },
 
-  resolve: {
-    alias: {
-     // 'src': path.resolve(__dirname, './src'),
-      //'assets': path.resolve(__dirname, './src/assets/'),
-      //'components': path.resolve(__dirname, './src/vue-components'),
-      'vue$': 'vue/dist/vue.common.js'
-    }
-  },
-
   devServer: {
     historyApiFallback: true,
     noInfo: true,
@@ -63,7 +62,7 @@ module.exports = {
         target: 'http://127.0.0.1:8080/',
         secure: false,
         changeOrigin: true,
-        logLevel: 'debug' //enable on dev,
+        logLevel: 'debug'
       }
     }
   },
@@ -78,7 +77,6 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
