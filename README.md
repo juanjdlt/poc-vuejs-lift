@@ -1,25 +1,25 @@
 # poc-vuejs-lift
 
-Proof of concept for showing [Webpack](https://webpack.github.io/) + [VueJS 2](https://github.com/vuejs/vue) with Single Page Components, page routing ecosystem along with [Scala Lift Framework] as a REST API. 
+Proof of concept for showing [Webpack](https://webpack.github.io/) + [VueJS 2](https://github.com/vuejs/vue) with Single Page Components, page routing ecosystem along with [Scala Lift Framework](https://www.liftweb.net/) as a REST API. 
 WebPack Dev Server is enabled for local development, hot reloading and lintin.
 REST API calls are proxied in the Webpack Dev Server to make it work along Jetty SBT Lift Server
 
-## Front End Tech Stack:
+## Front End Tech Stack
 * [Yarn](https://yarnpkg.com/en/docs/install) - FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT. -
 * [Webpack 2](https://webpack.github.io/) - MODULE BUNDLER -
 * [VueJS 2](https://github.com/vuejs/vue) - THE PROGRESSIVE JAVASCRIPT FRAMEWORK -
-** [Vue Router 2](https://github.com/vuejs/vue-router) - THE OFFICIAL ROUTER FOR VUE.JS -
-** [Vue Resource](https://github.com/pagekit/vue-resource) - THE HTTP CLIENT FOR VUE.JS -
+  * [Vue Router 2](https://github.com/vuejs/vue-router) - THE OFFICIAL ROUTER FOR VUE.JS -
+  * [Vue Resource](https://github.com/pagekit/vue-resource) - THE HTTP CLIENT FOR VUE.JS -
 
-## Back End Tech Stack:
+## Back End Tech Stack
 * [Scala Lift Framework](https://www.liftweb.net/) - LIFT IS THE MOST POWERFUL, MOST SECURE WEB FRAMEWORK AVAILABLE TODAY -
 
 
 ## Getting Started
 1. Be sure you have [Yarn](https://yarnpkg.com/en/docs/install) installed globally.
 2. Clone the repo
-3. Run `sbt ~container:start` in order to start Rest API Server in the project root
-4. run `yarn` or `yarn install` from `/src/main/webapp`
+3. Run `sbt ~container:start` in in the project root in order to start Rest API Server 
+4. run `yarn` or `yarn install` in `/src/main/webapp`
 
 Then if you want to start de WebPack Dev Server run `yarn dev`, otherwise if you want to build the bundle containing all the scripts and code necessary to run in a production like environment run `yarn build`
 
