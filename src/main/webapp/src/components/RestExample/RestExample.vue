@@ -1,10 +1,10 @@
 <template>
-  <div class="form">
-       <p> El siguiente Form envia una cadena de texto cualquier y la concatena el currentMillis del servidor REST  </p>
-      <input v-model="message" placeholder="ingresa el texto" v-on:keyup.enter="sendText">
-      <button :disabled="isProcessing" v-on:click="sendText">{{buttonName}}</button>
-      <pre>El resultado es: {{result}}</pre>
-    </div>
+  <div class="example" style="margin-top: 10px">
+    <p> El siguiente Form envia una cadena de texto cualquier y la concatena el currentMillis del servidor REST</p>
+    <input placeholder="ingresa el texto" v-model="message" v-on:keyup.enter="sendText">
+    <button :disabled="isProcessing" v-on:click="sendText">{{buttonName}}</button>
+    <pre>El resultado es: {{result}}</pre>
+  </div>
 </template>
 
 <script>  
@@ -40,9 +40,3 @@
     }
   }
 </script>
-
-<style>
-  .form {
-    margin-top: 10px;
-  }
-</style>
